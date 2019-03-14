@@ -26,4 +26,8 @@ public class Mängija {
         }
         return true;
     }
+
+    void prindiVäli() {
+        mänguväli.väljastaVäli();
+    }
 }
