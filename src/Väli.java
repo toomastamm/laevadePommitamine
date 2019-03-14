@@ -28,7 +28,11 @@ public class Väli {
         }
     }
 
-    void määraSisu(int x, int y, String sisu) {
+    String getSisu(int x, int y) {
+        return mänguväli[y][x];
+    }
+
+    void setSisu(int x, int y, String sisu) {
         mänguväli[y][x] = sisu;
     }
 
