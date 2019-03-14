@@ -1,7 +1,9 @@
 public class Väli {
     private String[][] mänguväli;
+    private int pikkus;
 
     public Väli(int pikkus) {
+        this.pikkus = pikkus;
         this.mänguväli = new String[pikkus][pikkus];
 
         for (int i = 0; i < mänguväli.length; i++) {
@@ -22,5 +24,9 @@ public class Väli {
 
     void määraSisu(int x, int y, String sisu) {
         mänguväli[y][x] = sisu;
+    }
+
+    public int getPikkus() {
+        return pikkus;
     }
 }
