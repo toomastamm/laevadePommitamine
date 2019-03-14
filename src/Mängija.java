@@ -1,8 +1,10 @@
 public class Mängija {
     private Väli mänguväli;
+    private String nimi;
 
-    public Mängija(int pikkus) {
+    public Mängija(String nimi, int pikkus) {
         this.mänguväli = new Väli(pikkus);
+        this.nimi = nimi;
     }
 
 
@@ -29,5 +31,9 @@ public class Mängija {
 
     void prindiVäli() {
         mänguväli.väljastaVäli();
+    }
+
+    public String getNimi() {
+        return nimi;
     }
 }

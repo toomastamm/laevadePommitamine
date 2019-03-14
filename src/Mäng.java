@@ -2,9 +2,9 @@ public class Mäng {
     Mängija mängija1;
     Mängija mängija2;
 
-    public Mäng(int pikkus) {
-        this.mängija1 = new Mängija(pikkus);
-        this.mängija2 = new Mängija(pikkus);
+    public Mäng(int pikkus, String nimi1, String nimi2) {
+        this.mängija1 = new Mängija(nimi1, pikkus);
+        this.mängija2 = new Mängija(nimi2, pikkus);
     }
 
     void prindiVäljad() {
@@ -20,5 +20,10 @@ public class Mäng {
 
     public Mängija getMängija2() {
         return mängija2;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Mängivad %s ja %s.", mängija1.getNimi(), mängija2.getNimi());
     }
 }
