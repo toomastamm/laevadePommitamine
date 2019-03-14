@@ -24,7 +24,7 @@ public class Mängija {
         }
 
         for (int i = 0; i < pikkus; i++) {
-            mänguväli.määraSisu(x + i*delta_x, y + i*delta_y, "X");
+            mänguväli.määraSisu(x + i*delta_x, y + i*delta_y, Väli.laev);
         }
         return true;
     }
