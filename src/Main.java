@@ -12,6 +12,7 @@ public class Main {
         Mäng mäng = new Mäng(10, nimi1, nimi2);
 
         System.out.println(mäng.toString());
+        mäng.prindiVäljad();
 
     }
 }

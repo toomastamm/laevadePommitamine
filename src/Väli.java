@@ -20,11 +20,24 @@ public class Väli {
     }
 
     void väljastaVäli() {
-        for (int i = 0; i < mänguväli.length; i++) {
-            for (int j = 0; j < mänguväli[0].length; j++) {
-                System.out.print(mänguväli[i][j] + " ");
+        for (int i = 0; i < pikkus; i++) {
+            for (int j = 0; j < pikkus; j++) {
+                System.out.print(getSisu(j, i) + " ");
             }
             System.out.print("\n");
+        }
+    }
+
+    void väljastaVäliVastasele() {
+        for (int y = 0; y < pikkus; y++) {
+            for (int x = 0; x < pikkus; x++) {
+                if (getSisu(x, y) == laev) {
+                    System.out.print(tavaline);
+                } else {
+                    System.out.print(getSisu(x, y) + " ");
+                }
+                System.out.print("\n");
+            }
         }
     }
 

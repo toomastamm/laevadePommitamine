@@ -3,15 +3,15 @@ public class Mäng {
     Mängija mängija2;
 
     public Mäng(int pikkus, String nimi1, String nimi2) {
-        this.mängija1 = new Mängija(nimi1, pikkus);
-        this.mängija2 = new Mängija(nimi2, pikkus);
+        this.mängija1 = new m_inimene(nimi1, pikkus);
+        this.mängija2 = new m_inimene(nimi2, pikkus);
     }
 
     void prindiVäljad() {
-        System.out.println("Mängija 1:");
-        mängija1.prindiVäli();
-        System.out.println("Mängija 2:");
-        mängija2.prindiVäli();
+        System.out.println(String.format("%s:", mängija1.getNimi()));
+        mängija1.väljastaVäliEndale();
+        System.out.println(String.format("%s:", mängija2.getNimi()));
+        mängija2.väljastaVäliEndale();
     }
 
     public Mängija getMängija1() {

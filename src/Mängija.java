@@ -1,4 +1,4 @@
-public class Mängija {
+abstract public class Mängija {
     private Väli mänguväli;
     private String nimi;
 
@@ -7,43 +7,33 @@ public class Mängija {
         this.nimi = nimi;
     }
 
+    abstract boolean paigutaLaev(String suund, int pikkus, int x, int y);
 
-    boolean paiguaLaev(String suund, int pikkus, int x, int y) {
-        int delta_x = 0;
-        int delta_y = 0;
-        if (suund == "alla") {
-            delta_y = 1;
-            if (y + pikkus > mänguväli.getPikkus()) {
-                return false;
-            }
-        } else if (suund == "paremale") {
-            delta_x = 1;
-            if (x + pikkus > mänguväli.getPikkus()) {
-                return false;
-            }
+    boolean vastaseLask(int x, int y) {
+        if (mänguväli.getSisu(x, y).equals(Väli.laev)) {
+            mänguväli.setSisu(x, y, Väli.pihtas);
+            return true;
+        } else if (mänguväli.getSisu(x, y).equals(Väli.tavaline)) {
+            mänguväli.setSisu(x, y, Väli.möödas);
         }
-
-        for (int i = 0; i < pikkus; i++) {
-            mänguväli.setSisu(x + i * delta_x, y + i * delta_y, Väli.laev);
-        }
-        return true;
+        return false;
     }
 
-    void prindiVäli() {
+    void väljastaVäliEndale() {
         mänguväli.väljastaVäli();
     }
 
-    boolean lask(int x, int y) {
-        if (mänguväli.getSisu(x, y) == mänguväli.laev) {
-            mänguväli.setSisu(x, y, mänguväli.pihtas);
-            return true;
-        } else if (mänguväli.getSisu(x, y) == mänguväli.tavaline) {
-            mänguväli.setSisu(x, y, mänguväli.möödas);
-        }
-        return false;
+    void väljastaVäliVastasele() {
+        mänguväli.väljastaVäliVastasele();
+    }
+
+    public Väli getMänguväli() {
+        return mänguväli;
     }
 
     public String getNimi() {
         return nimi;
     }
+
+
 }
