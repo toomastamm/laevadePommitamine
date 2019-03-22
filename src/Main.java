@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Kui on soov mängida arvuti vastu, sisesta nimeks 'arvuti' \n");
         System.out.println("Sisesta esimese mängija nimi: ");
         Scanner scanner = new Scanner(System.in);
         String nimi1 = scanner.nextLine();
