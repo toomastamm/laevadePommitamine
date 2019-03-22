@@ -4,7 +4,12 @@ public class m_arvuti extends Mängija {
     }
 
     @Override
-    boolean paigutaLaev(String suund, int pikkus, int x, int y) {
+    boolean paigutaLaev(int pikkus) {
+        return false;
+    }
+
+    @Override
+    boolean lase(Mängija vastane) {
         return false;
     }
 }

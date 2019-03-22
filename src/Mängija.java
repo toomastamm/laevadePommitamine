@@ -7,8 +7,16 @@ abstract public class Mängija {
         this.nimi = nimi;
     }
 
-    abstract boolean paigutaLaev(String suund, int pikkus, int x, int y);
+    abstract boolean paigutaLaev(int pikkus);
 
+    abstract boolean lase(Mängija vastane);
+
+    /**
+     * Sooritab lasu mängija väljale,
+     * @param x
+     * @param y
+     * @return pihtas - true, möödas - false
+     */
     boolean vastaseLask(int x, int y) {
         if (mänguväli.getSisu(x, y).equals(Väli.laev)) {
             mänguväli.setSisu(x, y, Väli.pihtas);

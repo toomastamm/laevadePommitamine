@@ -1,14 +1,9 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Kui on soov mängida arvuti vastu, sisesta nimeks 'arvuti' \n");
-        System.out.println("Sisesta esimese mängija nimi: ");
-        Scanner scanner = new Scanner(System.in);
-        String nimi1 = scanner.nextLine();
-        System.out.println("Sisesta teise mängija nimi: ");
-        String nimi2 = scanner.nextLine();
+        String nimi1 = Print_abi.küsi("Sisesta esimese mängija nimi: ");
+        String nimi2 = Print_abi.küsi("Sisesta teise mängija nimi: ");
 
         Mäng mäng = new Mäng(10, nimi1, nimi2);
 
