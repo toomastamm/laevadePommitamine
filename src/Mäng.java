@@ -48,14 +48,10 @@ public class Mäng {
         System.out.println(String.format("Mängija %s kord paigutada laevu: ", mängija.getNimi()));
         mängija.väljastaVäliEndale();
         for (int i = 2; i < 5; i++) {
-            for (int j = 0; j < 5-i; j++) {
+            for (int j = 0; j < 5 - i; j++) {
                 boolean paigutatud = false;
                 do {
-                    System.out.println(String.format("Paiguta laev pikkusega %s", i));
                     paigutatud = mängija.paigutaLaev(i);
-                    if (!paigutatud) {
-                        System.out.println("Paigutamine ebaõnnestus!");
-                    }
                 }
                 while (!paigutatud);
                 mängija.väljastaVäliEndale();
