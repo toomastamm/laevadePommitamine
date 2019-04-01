@@ -25,6 +25,11 @@ public class m_inimene extends Mängija {
             }
         }
 
+        for (int i = 0; i < pikkus; i++) {
+            getMänguväli().setSisu(x + i * delta_x, y + i * delta_y, Väli.laev);
+        }
+        return true;
+
         //Paiguta laev
         for (int i = 0; i < pikkus; i++) {
             getMänguväli().setSisu(x + i * delta_x, y + i * delta_y, Väli.laev);
