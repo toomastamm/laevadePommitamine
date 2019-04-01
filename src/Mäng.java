@@ -67,7 +67,7 @@ public class Mäng {
         while (true) {
             boolean pihtas = false;
             do {
-                mängija1.lase(mängija2);
+                pihtas = mängija1.lase(mängija2);
                 if (mängija2.getMänguväli().laevuPole()) {
                     break pealoop;
                 }
@@ -77,7 +77,7 @@ public class Mäng {
             pihtas = false;
 
             do {
-                mängija2.lase(mängija1);
+                pihtas = mängija2.lase(mängija1);
                 if (mängija1.getMänguväli().laevuPole()) {
                     break pealoop;
                 }
