@@ -37,13 +37,13 @@ public class Väli {
     void väljastaVäliVastasele() {
         for (int y = 0; y < pikkus; y++) {
             for (int x = 0; x < pikkus; x++) {
-                if (getSisu(x, y) == laev) {
+                if (getSisu(x, y).equals(laev)) {
                     System.out.print(tavaline + " ");
                 } else {
                     System.out.print(getSisu(x, y) + " ");
                 }
-                System.out.print("\n");
             }
+            System.out.print("\n");
         }
     }
 

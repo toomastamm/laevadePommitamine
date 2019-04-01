@@ -113,6 +113,7 @@ abstract public class Mängija {
     boolean vastaseLask(int x, int y) {
         if (mänguväli.getSisu(x, y).equals(Väli.laev)) {
             mänguväli.setSisu(x, y, Väli.pihtas);
+            mänguväli.pihtasPõhjas(-1, x, y);
             return true;
         } else if (mänguväli.getSisu(x, y).equals(Väli.tavaline)) {
             mänguväli.setSisu(x, y, Väli.möödas);

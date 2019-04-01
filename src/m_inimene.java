@@ -24,9 +24,11 @@ public class m_inimene extends Mängija {
 
     @Override
     boolean lase(Mängija vastane) {
+        vastane.väljastaVäliVastasele();
+        System.out.println(String.format("%s kord lasta", getNimi()));
         int y = Integer.parseInt(Print_abi.küsi("Sisesta veerg: "));
         int x = Integer.parseInt(Print_abi.küsi("Sisesta rida: "));
 
-        return vastane.vastaseLask(x, y);
+        return vastane.vastaseLask(y, x);
     }
 }
