@@ -76,6 +76,8 @@ public class Mäng {
 
             pihtas = false;
 
+            Print_abi.vahetaMängijat();
+
             do {
                 pihtas = mängija2.lase(mängija1);
                 if (mängija1.getMänguväli().laevuPole()) {
