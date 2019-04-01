@@ -46,7 +46,6 @@ public class Mäng {
 
     private void paigutaLaevad(Mängija mängija) {
         System.out.println(String.format("Mängija %s kord paigutada laevu: ", mängija.getNimi()));
-        mängija.väljastaVäliEndale();
         for (int i = 2; i < 5; i++) {
             for (int j = 0; j < 5 - i; j++) {
                 boolean paigutatud = false;
@@ -54,9 +53,9 @@ public class Mäng {
                     paigutatud = mängija.paigutaLaev(i);
                 }
                 while (!paigutatud);
-                mängija.väljastaVäliEndale();
             }
         }
+        System.out.println("Laevad paigutatud");
     }
 
     public void alustaMäng() {

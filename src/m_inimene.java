@@ -6,6 +6,7 @@ public class m_inimene extends Mängija {
 
     @Override
     boolean paigutaLaev(int pikkus) {
+        väljastaVäliEndale();
         System.out.println(String.format("Paiguta laev pikkusega %s", pikkus));
 
         int y = Integer.parseInt(Print_abi.küsi("Sisesta veerg: "));
