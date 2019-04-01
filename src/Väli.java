@@ -56,7 +56,10 @@ public class Väli {
      * @return
      */
     String getSisu(int x, int y) {
-        return mänguväli[y][x];
+        if (x >= 0 && x < getPikkus() && y >= 0 && y < getPikkus()) {
+            return mänguväli[y][x];
+        }
+        return "Viga";
     }
 
 

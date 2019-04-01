@@ -53,6 +53,9 @@ public class Mäng {
                 do {
                     System.out.println(String.format("Paiguta laev pikkusega %s", i));
                     paigutatud = mängija.paigutaLaev(i);
+                    if (!paigutatud) {
+                        System.out.println("Paigutamine ebaõnnestus!");
+                    }
                 }
                 while (!paigutatud);
                 mängija.väljastaVäliEndale();
@@ -85,6 +88,8 @@ public class Mäng {
                 }
             }
             while (pihtas);
+
+            Print_abi.vahetaMängijat();
         }
 
         prindiVäljad();
