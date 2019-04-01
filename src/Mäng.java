@@ -35,4 +35,36 @@ public class Mäng {
     public String toString() {
         return String.format("Mängivad %s ja %s.", mängija1.getNimi(), mängija2.getNimi());
     }
+
+    public void laevadePaigutamine() {
+        System.out.println(String.format("Mängija %s kord paigutada laevu: ", mängija1.getNimi()));
+        mängija1.väljastaVäliEndale();
+        for (int i = 2; i < 5; i++) {
+            for (int j = 0; j < 5-i; j++) {
+                boolean paigutatud = false;
+                do {
+                    System.out.println(String.format("Paiguta laev pikkusega %s", i));
+                    paigutatud = mängija1.paigutaLaev(i);
+                }
+                while (!paigutatud);
+                mängija1.väljastaVäliEndale();
+            }
+        }
+
+        Print_abi.vahetaMängijat();
+
+        System.out.println(String.format("Mängija %s kord paigutada laevu: ", mängija2.getNimi()));
+        mängija2.väljastaVäliEndale();
+        for (int i = 2; i < 5; i++) {
+            for (int j = 0; j < 5-i; j++) {
+                boolean paigutatud = false;
+                do {
+                    System.out.println(String.format("Paiguta laev pikkusega %s", i));
+                    paigutatud = mängija2.paigutaLaev(i);
+                }
+                while (!paigutatud);
+                mängija2.väljastaVäliEndale();
+            }
+        }
+    }
 }

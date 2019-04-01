@@ -13,6 +13,7 @@ abstract public class Mängija {
 
     /**
      * Sooritab lasu mängija väljale,
+     *
      * @param x
      * @param y
      * @return pihtas - true, möödas - false

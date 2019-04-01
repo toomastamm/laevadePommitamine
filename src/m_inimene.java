@@ -9,17 +9,16 @@ public class m_inimene extends Mängija {
         int x = Integer.parseInt(Print_abi.küsi("Sisesta rida: "));
         int y = Integer.parseInt(Print_abi.küsi("Sisesta veerg: "));
         String suund = Print_abi.küsi("Sisesta suund (alla/paremale): ");
-
         int delta_x = 0;
         int delta_y = 0;
 
         //Määra suund abimuutujasse, kontrolli kas laeva jaoks on ruumi
-        if (suund == "alla") {
+        if (suund.equals("alla")) {
             delta_y = 1;
             if (y + pikkus > getMänguväli().getPikkus()) {
                 return false;
             }
-        } else if (suund == "paremale") {
+        } else if (suund.equals("paremale")) {
             delta_x = 1;
             if (x + pikkus > getMänguväli().getPikkus()) {
                 return false;

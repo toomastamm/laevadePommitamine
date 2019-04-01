@@ -50,6 +50,7 @@ public class Väli {
 
     /**
      * Tagastab mänguvälja x, y kordinaadil asuva väärtuse
+     *
      * @param x
      * @param y
      * @return
@@ -61,6 +62,7 @@ public class Väli {
 
     /**
      * Määrab mänguvälja x, y kordinaadi sisu ümber
+     *
      * @param x
      * @param y
      * @param sisu
@@ -71,6 +73,7 @@ public class Väli {
 
     /**
      * Tagastab mänguvälja külgede pikkuse
+     *
      * @return
      */
     public int getPikkus() {
@@ -79,12 +82,12 @@ public class Väli {
 
     /**
      * Vaatab rekursiivselt, kas laev on põhja lastud, kui on, siis muudab laeva pihtasPõhjaks
-     * @param suund
-     * -1 = Määramata
-     *  1 = Üles
-     *  2 = Paremale
-     *  3 = Alla
-     *  4 = Vasakule
+     *
+     * @param suund -1 = Määramata
+     *              1 = Üles
+     *              2 = Paremale
+     *              3 = Alla
+     *              4 = Vasakule
      * @param x
      * @param y
      */
@@ -125,12 +128,12 @@ public class Väli {
 
     /**
      * Muudab rekursiivselt kõik algkordinaadiga ühendatud pihtas väärtused pihtas põhjaks
-     * @param suund
-     * -1 = Määramata
-     *  1 = Üles
-     *  2 = Paremale
-     *  3 = Alla
-     *  4 = Vasakule
+     *
+     * @param suund -1 = Määramata
+     *              1 = Üles
+     *              2 = Paremale
+     *              3 = Alla
+     *              4 = Vasakule
      * @param x
      * @param y
      */
@@ -166,6 +169,7 @@ public class Väli {
 
     /**
      * Kontrollib, kas laevu on veel mänguväljal.
+     *
      * @return
      */
     public boolean laevuPole() {
@@ -181,6 +185,7 @@ public class Väli {
 
     /**
      * Kontrollib, kas antud kordinaadid on mänguvälja piirides
+     *
      * @param x
      * @param y
      * @return

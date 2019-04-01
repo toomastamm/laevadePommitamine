@@ -14,4 +14,10 @@ public class Print_abi {
         return scanner.nextLine();
     }
 
+    static void vahetaMängijat() {
+        küsi("Vajuta enter, et lõpetada käik");
+        tühjenda_ekraan();
+        küsi("Read peidetud - Vajuta enter, et vahetada mängijat");
+        tühjenda_ekraan();
+    }
 }
