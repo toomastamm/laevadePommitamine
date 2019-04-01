@@ -37,34 +37,59 @@ public class Mäng {
     }
 
     public void laevadePaigutamine() {
-        System.out.println(String.format("Mängija %s kord paigutada laevu: ", mängija1.getNimi()));
-        mängija1.väljastaVäliEndale();
-        for (int i = 2; i < 5; i++) {
-            for (int j = 0; j < 5-i; j++) {
-                boolean paigutatud = false;
-                do {
-                    System.out.println(String.format("Paiguta laev pikkusega %s", i));
-                    paigutatud = mängija1.paigutaLaev(i);
-                }
-                while (!paigutatud);
-                mängija1.väljastaVäliEndale();
-            }
-        }
+        paigutaLaevad(mängija1);
 
         Print_abi.vahetaMängijat();
 
-        System.out.println(String.format("Mängija %s kord paigutada laevu: ", mängija2.getNimi()));
-        mängija2.väljastaVäliEndale();
+        paigutaLaevad(mängija2);
+    }
+
+    private void paigutaLaevad(Mängija mängija) {
+        System.out.println(String.format("Mängija %s kord paigutada laevu: ", mängija.getNimi()));
+        mängija.väljastaVäliEndale();
         for (int i = 2; i < 5; i++) {
             for (int j = 0; j < 5-i; j++) {
                 boolean paigutatud = false;
                 do {
                     System.out.println(String.format("Paiguta laev pikkusega %s", i));
-                    paigutatud = mängija2.paigutaLaev(i);
+                    paigutatud = mängija.paigutaLaev(i);
                 }
                 while (!paigutatud);
-                mängija2.väljastaVäliEndale();
+                mängija.väljastaVäliEndale();
             }
+        }
+    }
+
+    public void alustaMäng() {
+        Print_abi.tühjenda_ekraan();
+
+        pealoop:
+        while (true) {
+            boolean pihtas = false;
+            do {
+                mängija1.lase(mängija2);
+                if (mängija2.getMänguväli().laevuPole()) {
+                    break pealoop;
+                }
+            }
+            while (pihtas);
+
+            pihtas = false;
+
+            do {
+                mängija2.lase(mängija1);
+                if (mängija1.getMänguväli().laevuPole()) {
+                    break pealoop;
+                }
+            }
+            while (pihtas);
+        }
+
+        prindiVäljad();
+        if (mängija1.getMänguväli().laevuPole()) {
+            System.out.println(String.format("Mängija %s võitis", mängija2.getNimi()));
+        } else {
+            System.out.println(String.format("Mängija %s võitis", mängija1.getNimi()));
         }
     }
 }

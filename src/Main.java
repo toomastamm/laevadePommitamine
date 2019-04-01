@@ -11,6 +11,7 @@ public class Main {
 
         //Laevade paigutamine
         mäng.laevadePaigutamine();
+        mäng.alustaMäng();
 
     }
 }
