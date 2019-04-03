@@ -5,11 +5,36 @@ public class m_arvuti extends Mängija {
 
     @Override
     boolean paigutaLaev(int pikkus) {
-        return false;
+        väljastaVäliEndale();
+        int x;
+        int y;
+        String suund;
+        int suuna = (int)(Math.random()*2);
+        if(suuna == 0) {
+            suund = "paremale";
+            y = (int) (Math.random() * (10 - pikkus));
+            x = (int) (Math.random() * 10);
+        }
+        else {
+            suund = "alla";
+            y = (int) (Math.random() * 10);
+            x = (int) (Math.random() * (10 - pikkus));
+
+        }
+        boolean paigutus = prooviPaigutada(x, y, pikkus, suund);
+
+        if (!paigutus) {
+            System.out.println("Paigutamine ebaõnnestus!");
+        }
+
+        return paigutus;
     }
 
     @Override
     boolean lase(Mängija vastane) {
-        return false;
+        vastane.väljastaVäliVastasele();
+        int y = (int)(Math.random()*10);
+        int x = (int)(Math.random()*10);
+        return vastane.vastaseLask(y, x);
     }
 }
