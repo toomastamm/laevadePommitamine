@@ -21,7 +21,7 @@ public class m_arvuti extends Mängija {
             x = (int) (Math.random() * (10 - pikkus));
 
         }
-        boolean paigutus = prooviPaigutada(x, y, pikkus, suund);
+            boolean paigutus = prooviPaigutada(x, y, pikkus, suund);
 
         if (!paigutus) {
             System.out.println("Paigutamine ebaõnnestus!");
@@ -33,8 +33,20 @@ public class m_arvuti extends Mängija {
     @Override
     boolean lase(Mängija vastane) {
         vastane.väljastaVäliVastasele();
+        boolean sobiv = false;
         int y = (int)(Math.random()*10);
         int x = (int)(Math.random()*10);
+        while (sobiv = false){
+
+        if((vastane.getMänguväli().getSisu(x,y)).equals("tavaline")){
+            sobiv = true;
+        }
+        else {
+            y = (int)(Math.random()*10);
+            x = (int)(Math.random()*10);
+        }
+        }
         return vastane.vastaseLask(y, x);
     }
 }
+

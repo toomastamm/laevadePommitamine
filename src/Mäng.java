@@ -3,14 +3,14 @@ public class Mäng {
     Mängija mängija2;
 
     public Mäng(int pikkus, String nimi1, String nimi2) {
-        if (nimi1.equals("arvuti")) {
+        if (nimi1.startsWith("arvuti")) {
             this.mängija1 = new m_arvuti(nimi1, pikkus);
         } else {
             this.mängija1 = new m_inimene(nimi1, pikkus);
         }
 
-        if (nimi2.equals("arvuti")) {
-            this.mängija2 = new m_arvuti(nimi1, pikkus);
+        if (nimi2.startsWith("arvuti")) {
+            this.mängija2 = new m_arvuti(nimi2, pikkus);
         } else {
             this.mängija2 = new m_inimene(nimi2, pikkus);
         }
