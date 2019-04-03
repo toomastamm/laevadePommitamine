@@ -3,6 +3,12 @@ public class Mäng {
     Mängija mängija2;
     int käik = 0;
 
+    /**
+     * Otsustab, kas mängija on arvuti või inimene, edastab vastavalt mänguvälja x ja y pikkused
+     * @param pikkus mänguvälja x ja y pikkused
+     * @param nimi1 mängija nimi
+     * @param nimi2 -,,-
+     */
     public Mäng(int pikkus, String nimi1, String nimi2) {
         if (nimi1.startsWith("arvuti")) {
             this.mängija1 = new m_arvuti(nimi1, pikkus);
@@ -17,6 +23,9 @@ public class Mäng {
         }
     }
 
+    /**
+     * Väljastab mõlema mängija väljad originaalsel kujul
+     */
     void prindiVäljad() {
         System.out.println(String.format("%s:", mängija1.getNimi()));
         mängija1.väljastaVäliEndale();
@@ -37,6 +46,9 @@ public class Mäng {
         return String.format("Mängivad %s ja %s.", mängija1.getNimi(), mängija2.getNimi());
     }
 
+    /**
+     * Alustab laevade panemise faasi
+     */
     public void laevadePaigutamine() {
         paigutaLaevad(mängija1);
 
@@ -45,6 +57,10 @@ public class Mäng {
         paigutaLaevad(mängija2);
     }
 
+    /**
+     * Annab käsu mängijale paigutada laev
+     * @param mängija objekt
+     */
     private void paigutaLaevad(Mängija mängija) {
         System.out.println(String.format("Mängija %s kord paigutada laevu: ", mängija.getNimi()));
         for (int i = 3; i < 5; i++) {
@@ -59,6 +75,9 @@ public class Mäng {
         System.out.println("Laevad paigutatud");
     }
 
+    /**
+     * Alustab mängu põhiosa ehk pommitamist
+     */
     public void alustaMäng() {
         Print_abi.tühjenda_ekraan();
 

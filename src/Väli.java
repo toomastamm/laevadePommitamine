@@ -2,6 +2,7 @@ public class Väli {
     private static String[][] mänguväli;
     private static int pikkus;
 
+    // Välja tähisd
     static String tavaline = "○";
     static String pihtas = "X";
     static String möödas = "M";

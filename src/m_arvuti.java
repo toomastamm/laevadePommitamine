@@ -3,6 +3,11 @@ public class m_arvuti extends Mängija {
         super(nimi, pikkus);
     }
 
+    /**
+     * Arvuti paigutab automaatselt suvalistele kordinaatidele suvalise suunaga laeva
+     * @param pikkus laeva pikkus
+     * @return boolean kas sai paigutatud
+     */
     @Override
     boolean paigutaLaev(int pikkus) {
         väljastaVäliEndale();
@@ -29,6 +34,11 @@ public class m_arvuti extends Mängija {
         return paigutus;
     }
 
+    /**
+     * Sooritab lasu suvalistele kordinaatidele kuhu ei ole varem lasnud
+     * @param vastane vastase mängija objekt
+     * @return true or false kas sai pihta
+     */
     @Override
     boolean lase(Mängija vastane) {
         vastane.väljastaVäliVastasele();

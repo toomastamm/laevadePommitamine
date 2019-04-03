@@ -11,6 +11,14 @@ abstract public class Mängija {
 
     abstract boolean lase(Mängija vastane);
 
+    /**
+     * Vaatab, kas on võimalik laeva paigutada, kui on, siis paigutab
+     * @param x alguskordinaat
+     * @param y alguskordinaat
+     * @param pikkus kui pikk laev
+     * @param suund laeva suund
+     * @return
+     */
     boolean prooviPaigutada(int x, int y, int pikkus,  String suund) {
         int delta_x = 0;
         int delta_y = 0;
@@ -67,7 +75,7 @@ abstract public class Mängija {
      *
      * @param x
      * @param y
-     * @return pihtas - true, möödas - false
+     * @return boolean kas sai pihta
      */
     boolean vastaseLask(int x, int y) {
         if (mänguväli.getSisu(x, y).equals(Väli.laev)) {

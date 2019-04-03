@@ -10,8 +10,10 @@ public class Main {
 
         System.out.println(mäng.toString());
 
-        //Laevade paigutamine
+        //Laevade paigutamise faas
         mäng.laevadePaigutamine();
+
+        //Laskmisfaas
         mäng.alustaMäng();
 
     }

@@ -4,6 +4,11 @@ public class m_inimene extends Mängija {
         super(nimi, pikkus);
     }
 
+    /**
+     * Küsib kasutajalt kordinaate ja suunda, et paigutada laev
+     * @param pikkus kui pikk on laev, mida paigutada
+     * @return boolean kas sai paigutatud
+     */
     @Override
     boolean paigutaLaev(int pikkus) {
         väljastaVäliEndale();
@@ -22,6 +27,11 @@ public class m_inimene extends Mängija {
         return paigutus;
     }
 
+    /**
+     * Küsib kasutajalt sisendit, kuhu lasta
+     * @param vastane vastase mängija objekt, kuhu lasta
+     * @return boolean kas sai pihta
+     */
     @Override
     boolean lase(Mängija vastane) {
         vastane.väljastaVäliVastasele();
