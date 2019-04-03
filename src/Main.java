@@ -1,3 +1,10 @@
+/**
+ * Laevade pommitamine
+ *
+ * Toomas Tamm ja Kristo Koval
+ */
+
+
 public class Main {
 
     public static void main(String[] args) {
