@@ -1,6 +1,7 @@
 public class Mäng {
     Mängija mängija1;
     Mängija mängija2;
+    int käik = 0;
 
     public Mäng(int pikkus, String nimi1, String nimi2) {
         if (nimi1.startsWith("arvuti")) {
@@ -65,6 +66,8 @@ public class Mäng {
         while (true) {
             boolean pihtas = false;
             do {
+                this.käik += 1;
+                System.out.println(String.format("Käik %s", this.käik));
                 pihtas = mängija1.lase(mängija2);
                 if (mängija2.getMänguväli().laevuPole()) {
                     break pealoop;
@@ -77,6 +80,8 @@ public class Mäng {
             Print_abi.vahetaMängijat();
 
             do {
+                this.käik += 1;
+                System.out.println(String.format("Käik %s", this.käik));
                 pihtas = mängija2.lase(mängija1);
                 if (mängija1.getMänguväli().laevuPole()) {
                     break pealoop;
