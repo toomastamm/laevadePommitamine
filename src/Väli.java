@@ -1,6 +1,6 @@
 public class Väli {
-    private String[][] mänguväli;
-    private int pikkus;
+    private static String[][] mänguväli;
+    private static int pikkus;
 
     static String tavaline = "○";
     static String pihtas = "X";
@@ -55,7 +55,7 @@ public class Väli {
      * @param y
      * @return
      */
-    String getSisu(int x, int y) {
+    static String getSisu(int x, int y) {
         if (x >= 0 && x < getPikkus() && y >= 0 && y < getPikkus()) {
             return mänguväli[y][x];
         }
@@ -79,7 +79,7 @@ public class Väli {
      *
      * @return
      */
-    public int getPikkus() {
+    public static int getPikkus() {
         return pikkus;
     }
 
