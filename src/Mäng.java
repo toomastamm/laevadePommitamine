@@ -5,9 +5,10 @@ public class Mäng {
 
     /**
      * Otsustab, kas mängija on arvuti või inimene, edastab vastavalt mänguvälja x ja y pikkused
+     *
      * @param pikkus mänguvälja x ja y pikkused
-     * @param nimi1 mängija nimi
-     * @param nimi2 -,,-
+     * @param nimi1  mängija nimi
+     * @param nimi2  -,,-
      */
     public Mäng(int pikkus, String nimi1, String nimi2) {
         if (nimi1.startsWith("arvuti")) {
@@ -29,7 +30,7 @@ public class Mäng {
     void prindiVäljad() {
         System.out.println(String.format("%s:", mängija1.getNimi()));
         mängija1.väljastaVäliEndale();
-        System.out.println(String.format("%s:", mängija2.getNimi()));
+        System.out.println(String.format("\n%s:", mängija2.getNimi()));
         mängija2.väljastaVäliEndale();
     }
 
@@ -51,14 +52,15 @@ public class Mäng {
      */
     public void laevadePaigutamine() {
         paigutaLaevad(mängija1);
-
-        Print_abi.vahetaMängijat();
-
+        if (!(mängija1.getNimi().startsWith("arvuti"))) {
+            Print_abi.vahetaMängijat();
+        }
         paigutaLaevad(mängija2);
     }
 
     /**
      * Annab käsu mängijale paigutada laev
+     *
      * @param mängija objekt
      */
     private void paigutaLaevad(Mängija mängija) {
@@ -96,8 +98,6 @@ public class Mäng {
 
             pihtas = false;
 
-            Print_abi.vahetaMängijat();
-
             do {
                 this.käik += 1;
                 System.out.println(String.format("Käik %s", this.käik));
@@ -108,7 +108,6 @@ public class Mäng {
             }
             while (pihtas);
 
-            Print_abi.vahetaMängijat();
         }
 
         prindiVäljad();

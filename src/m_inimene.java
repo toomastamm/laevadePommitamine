@@ -39,6 +39,12 @@ public class m_inimene extends Mängija {
         int y = Integer.parseInt(Print_abi.küsi("Sisesta veerg: "));
         int x = Integer.parseInt(Print_abi.küsi("Sisesta rida: "));
 
-        return vastane.vastaseLask(y, x);
+        boolean pihtas = vastane.vastaseLask(y, x);
+
+        if (!pihtas) {
+            Print_abi.vahetaMängijat();
+        }
+
+        return pihtas;
     }
 }

@@ -10,7 +10,7 @@ public class m_arvuti extends Mängija {
      */
     @Override
     boolean paigutaLaev(int pikkus) {
-        väljastaVäliEndale();
+//        väljastaVäliEndale();
         int x;
         int y;
         String suund;
@@ -27,9 +27,10 @@ public class m_arvuti extends Mängija {
         }
         boolean paigutus = prooviPaigutada(x, y, pikkus, suund);
 
-        if (!paigutus) {
-            System.out.println("Paigutamine ebaõnnestus!");
-        }
+//        if (!paigutus) {
+//            System.out.println("Paigutamine ebaõnnestus!");
+//        }
+
 
         return paigutus;
     }
@@ -41,7 +42,7 @@ public class m_arvuti extends Mängija {
      */
     @Override
     boolean lase(Mängija vastane) {
-        vastane.väljastaVäliVastasele();
+//        vastane.väljastaVäliVastasele();
 
         while (true) {
             int y = (int) (Math.random() * 10);

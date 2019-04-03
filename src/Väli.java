@@ -3,7 +3,7 @@ public class Väli {
     private static int pikkus;
 
     // Välja tähisd
-    static String tavaline = "○";
+    static String tavaline = "O";
     static String pihtas = "X";
     static String möödas = "M";
     static String pihtasPõhjas = "P";
@@ -24,7 +24,13 @@ public class Väli {
      * Väljastab mänguvälja konsooli originaalsel kujul
      */
     void väljastaVäli() {
+        System.out.print("  ");
         for (int i = 0; i < pikkus; i++) {
+            System.out.print(String.format("%s ", i));
+        }
+        System.out.println();
+        for (int i = 0; i < pikkus; i++) {
+            System.out.print(String.format("%s ", i));
             for (int j = 0; j < pikkus; j++) {
                 System.out.print(getSisu(j, i) + " ");
             }
@@ -36,7 +42,13 @@ public class Väli {
      * Väljastab mänguvälja konsooli, peites ära laevad
      */
     void väljastaVäliVastasele() {
+        System.out.print("  ");
+        for (int i = 0; i < pikkus; i++) {
+            System.out.print(String.format("%s ", i));
+        }
+        System.out.println();
         for (int y = 0; y < pikkus; y++) {
+            System.out.print(String.format("%s ", y));
             for (int x = 0; x < pikkus; x++) {
                 if (getSisu(x, y).equals(laev)) {
                     System.out.print(tavaline + " ");
