@@ -24,7 +24,7 @@ abstract public class Mängija {
         int delta_y = 0;
 
         //Määra suund abimuutujasse, kontrolli kas laeva jaoks on ruumi
-        if (suund.equals("alla")) {
+        if (suund.startsWith("a")) {
             delta_y = 1;
 
             //Kas mahub ära
@@ -42,7 +42,7 @@ abstract public class Mängija {
                 }
             }
 
-        } else if (suund.equals("paremale")) {
+        } else if (suund.startsWith("p")) {
             delta_x = 1;
 
             //Kas mahub ära
@@ -60,6 +60,8 @@ abstract public class Mängija {
                 }
             }
 
+        } else {
+            return false;
         }
 
 
