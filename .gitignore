@@ -4,3 +4,7 @@
 out/
 
 laevadePommitamine\.iml
+
+\.gradle/
+
+skoorid\.bin

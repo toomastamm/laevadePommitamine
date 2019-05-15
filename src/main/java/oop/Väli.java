@@ -1,3 +1,5 @@
+package oop;
+
 public class Väli {
     private String[][] mänguväli;
     private int pikkus;
