@@ -2,6 +2,10 @@
 
 Osa LTAT.03.033 Objektiorienteeritud programeerimiest
 
+## Mis see on?
+
+Klassikaline laevade pommitamise mäng tehtud Java 11 ja JavaFX 11-ga.
+
 ## Kuidas kasutada?
 Keeldub jar-iks kompileerumaks, äitah gradle ja idea.
 Seega tuleb hetkel ise kompileerida ja otse IDE-st jooksudada.
